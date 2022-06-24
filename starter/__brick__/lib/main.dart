@@ -1,3 +1,5 @@
+import 'package:test_brick/base_app.dart';
+
 import 'di/injection.dart';
 import 'ui/router.dart';
 import 'package:flutter/material.dart';
@@ -20,17 +22,18 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: '{{package_name}}',
+    return MaterialApp(
+      title: 'test_brick',
       debugShowCheckedModeBanner: false,
-      localizationsDelegates: [
+      localizationsDelegates: const [
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
       onGenerateRoute: AppRoutes.generateRoute,
-      supportedLocales: [Locale('id')],
+      supportedLocales: const [Locale('id')],
+      builder: (context, widget) => BaseApp(child: widget),
     );
   }
 }
