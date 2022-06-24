@@ -12,6 +12,7 @@ void main() async {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
     statusBarColor: Colors.transparent,
   ));
+  runApp(const App());
 }
 
 class App extends StatelessWidget {
