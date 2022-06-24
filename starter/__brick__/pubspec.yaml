@@ -1,0 +1,51 @@
+name: {{package_name}}
+description: A new Flutter project.
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.3 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  json_annotation: ^4.5.0
+  hydrated_bloc: ^8.1.0
+  equatable: ^2.0.3
+  cupertino_icons: ^1.0.2
+  retrofit: ^3.0.1+1
+  injectable: ^1.5.3
+  get_it: ^7.2.0
+  dartz: ^0.10.1
+  dio: ^4.0.6
+  google_fonts: ^3.0.1
+  dio_logging_interceptor: ^1.0.1
+  flutter_secure_storage: ^5.0.2
+  event_bus: ^2.0.0
+  firebase_core: ^1.17.1
+  firebase_messaging: ^11.4.1
+  flutter_bloc: ^8.0.1
+  path_provider: ^2.0.11
+  infinite_scroll_pagination: ^3.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+  json_serializable: 
+  build_runner: 
+  retrofit_generator: 
+  injectable_generator: 
+  flutter_gen_runner:
+
+flutter:
+  uses-material-design: true
+  generate: true
+  assets:
+    - assets/images/
+    - assets/maps/
