@@ -12,32 +12,28 @@ flutter create test_template
 cd test_template
 mason init
 ```
-3. Open mason.yaml file then copy this and save
+3. Open mason.yaml file then replace all content with below script
 ```
-# Register bricks which can be consumed via the Mason CLI.
-# https://github.com/felangel/mason
 bricks:
   starter:
     git:
       url: git@github.com:wahyudotdev/fluttercore.git
       path: starter
 ```
-4. Run mason get to download bricks from repository and then run mason make to autogenerate project starter
+4. Run mason get to download bricks from repository and then run mason make to autogenerate project starter. You will be prompted to enter screen size in UI design
 ```
 mason get
-mason make starter
+mason make starter --on-conflict overwrite
 ```
 
-5. After that you are required to enter flutter project name, in this case i will enter test_template as project name. Press 'Y' if prompted to overwrite existing file
-
-6. Then you can run flutter pub get to download packages
+5. Then you can run flutter pub get to download packages
 ```
 flutter pub get
 ```
 
-7. After that, use build runner to run code generator as this example is already configured with code generator and already include an example model classes with JsonSerializable
+6. After that, use build runner to run code generator
 ```
 flutter pub run build_runner watch --delete-conflicting-outputs
 ```
 
-8. Your project is ready now, happy coding :)
+7. Your project is ready now, happy coding :)
