@@ -1,3 +1,5 @@
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'base_app.dart';
 
 import 'di/injection.dart';
@@ -22,18 +24,23 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'test_brick',
-      debugShowCheckedModeBanner: false,
-      localizationsDelegates: const [
-        AppLocalizations.delegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      onGenerateRoute: AppRoutes.generateRoute,
-      supportedLocales: const [Locale('id')],
-      builder: (context, widget) => BaseApp(child: widget),
+    return ScreenUtilInit(
+      designSize: const Size(360, 690),
+      builder: (context, child) {
+        return MaterialApp(
+          title: '{{package_name}}',
+          debugShowCheckedModeBanner: false,
+          localizationsDelegates: const [
+            AppLocalizations.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          onGenerateRoute: AppRoutes.generateRoute,
+          supportedLocales: const [Locale('id')],
+          builder: (context, widget) => BaseApp(child: widget),
+        );
+      },
     );
   }
 }
