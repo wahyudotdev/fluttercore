@@ -10,3 +10,15 @@ vars:
     type: string
     description: This package name?
     prompt: This package name?
+  
+  width:
+    type: int
+    description: Device width (in design)
+    prompt: Device width (in design)
+    default: 360
+
+  height:
+    type: int
+    description: Device height (in design)
+    prompt: Device height (in design)
+    default: 690

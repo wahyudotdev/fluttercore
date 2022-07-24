@@ -25,7 +25,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(360, 690),
+      designSize: const Size({{width}}, {{height}}),
       builder: (context, child) {
         return MaterialApp(
           title: '{{package_name}}',
