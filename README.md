@@ -20,7 +20,7 @@ bricks:
       url: git@github.com:wahyudotdev/fluttercore.git
       path: starter
 ```
-4. Run mason get to download bricks from repository and then run mason make to autogenerate project starter. You will be prompted to enter screen size in UI design
+4. Run mason get to download bricks from repository and then run mason make to autogenerate project starter. You will be prompted to input screen size in UI design
 ```
 mason get
 mason make starter --on-conflict overwrite
