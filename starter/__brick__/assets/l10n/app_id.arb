@@ -1,5 +1,6 @@
 {
     "home":"Home",
     "notification":"Notification",
-    "profile":"Profile"
+    "profile":"Profile",
+    "cancel":"Cancel"
 }
