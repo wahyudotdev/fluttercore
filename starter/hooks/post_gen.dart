@@ -1,6 +1,8 @@
+import 'dart:io';
+
 import 'package:mason/mason.dart';
 
 void run(HookContext context) {
-  context.logger.info('hello {{package_name}}!');
-  context.vars = {...context.vars};
+  final packageName = Directory.current.path.split('/').last;
+  context.vars = {...context.vars, 'package_name': packageName};
 }
