@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:{{package_name}}/core/utils/translation.dart';
 import '../widget/im_flutter.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -11,12 +10,18 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      Future.delayed(const Duration(seconds: 3),
+          () => Navigator.of(context).pushReplacementNamed('/menu'));
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(context.text.helloMom)
-      ),
-      body: const ImFlutter(),
+    return const Scaffold(
+      body: ImFlutter(),
     );
   }
 }

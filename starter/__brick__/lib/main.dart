@@ -1,4 +1,4 @@
-import 'package:test_brick/base_app.dart';
+import 'base_app.dart';
 
 import 'di/injection.dart';
 import 'ui/router.dart';

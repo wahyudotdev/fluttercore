@@ -5,6 +5,9 @@ class ImFlutter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(child: FlutterLogo());
+    return const Center(
+        child: FlutterLogo(
+      size: 200,
+    ));
   }
 }
