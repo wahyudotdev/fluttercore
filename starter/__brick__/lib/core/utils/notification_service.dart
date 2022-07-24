@@ -1,9 +1,9 @@
 import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
-import 'package:test_template/core/config/config.dart';
+import 'package:{{package_name}}/core/config/config.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:test_template/core/data/model/notification/notification_data.dart';
+import 'package:{{package_name}}/core/data/model/notification/notification_data.dart';
 
 class NotificationService {
   static final _notifications = FlutterLocalNotificationsPlugin();

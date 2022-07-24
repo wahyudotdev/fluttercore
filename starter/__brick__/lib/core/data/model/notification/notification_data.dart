@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:test_template/core/utils/json_custom_parser.dart';
+import 'package:{{package_name}}/core/utils/json_custom_parser.dart';
 part '../../../../gen/core/data/model/notification/notification_data.g.dart';
 
 @JsonSerializable()
