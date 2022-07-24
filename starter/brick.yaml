@@ -6,11 +6,6 @@ version: 0.1.0+1
 environment:
   mason: ">=0.1.0-dev.26 <0.1.0"
 vars:
-  # package_name:
-  #   type: string
-  #   description: This package name?
-  #   prompt: This package name?
-  
   width:
     type: number
     description: Device width (in design)
