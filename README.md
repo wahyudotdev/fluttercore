@@ -1,5 +1,4 @@
 # FlutterCore Project Starter
-### This project starter will generate something like this
 
 ### Usage
 1. Install mason_cli
