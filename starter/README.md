@@ -11,13 +11,9 @@ flutter create test_template
 cd test_template
 mason init
 ```
-3. Open mason.yaml file then replace all content with below script
+3. Add this starter bricks to your codebase
 ```
-bricks:
-  starter:
-    git:
-      url: git@github.com:wahyudotdev/fluttercore.git
-      path: starter
+mason add starter --git-url git@github.com:wahyudotdev/fluttercore.git --git-path starter
 ```
 4. Run mason get to download bricks from repository and then run mason make to autogenerate project starter. You will be prompted to input screen size in UI design
 ```
