@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:{{package_name}}/core/utils/theme_extension.dart';
 
-import '../utils/screen.dart';
 import 'app_colors.dart';
 
 class AppSearchBar extends StatefulWidget {
@@ -57,7 +57,7 @@ class _AppSearchBarState extends State<AppSearchBar> {
               color: AppColors.textGray,
             ),
             contentPadding: EdgeInsets.symmetric(
-              horizontal: Screen.width * 4,
+              horizontal: 8.w,
             ),
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8),

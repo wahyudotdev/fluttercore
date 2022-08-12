@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:{{package_name}}/core/utils/theme_extension.dart';
 
-import '../utils/screen.dart';
 import 'app_colors.dart';
 
 class AppButton extends StatelessWidget {
@@ -12,7 +12,6 @@ class AppButton extends StatelessWidget {
   final bool isLoading;
   final Color outline;
   final TextStyle? textStyle;
-  final int minHeight;
   final double radius;
   const AppButton({
     super.key,
@@ -23,7 +22,6 @@ class AppButton extends StatelessWidget {
     this.isLoading = false,
     this.outline = Colors.transparent,
     this.textStyle,
-    this.minHeight = 7,
     this.radius = 10,
   });
   @override
@@ -37,7 +35,6 @@ class AppButton extends StatelessWidget {
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(radius),
             ),
-            minimumSize: Size.fromHeight(Screen.height * minHeight),
             backgroundColor: isEnabled == true ? color : Colors.grey,
             textStyle: textStyle ?? context.textTheme.button,
           ),
@@ -47,8 +44,8 @@ class AppButton extends StatelessWidget {
               Visibility(
                 visible: isLoading,
                 child: Container(
-                  width: Screen.width * 4,
-                  height: Screen.width * 4,
+                  width: 4.w,
+                  height: 4.w,
                   margin: const EdgeInsets.only(right: 4),
                   child: const CircularProgressIndicator.adaptive(
                     backgroundColor: Colors.white,

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:{{package_name}}/core/utils/theme_extension.dart';
 
-import '../utils/screen.dart';
 import 'app_colors.dart';
 
 class AppDropdown extends StatefulWidget {
@@ -67,17 +67,17 @@ class _AppDropdownState extends State<AppDropdown> {
             }),
             decoration: InputDecoration(
               contentPadding: EdgeInsets.symmetric(
-                vertical: Screen.height * 2,
-                horizontal: Screen.width * 2,
+                vertical: 4.h,
+                horizontal: 4.w,
               ),
               enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(12.r),
                 borderSide: const BorderSide(
                   color: AppColors.softGray,
                 ),
               ),
               border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(12.r),
                 borderSide: const BorderSide(
                   color: AppColors.softGray,
                 ),
