@@ -41,7 +41,7 @@ class _AppDropdownState extends State<AppDropdown> {
               color: widget.errorText != null
                   ? Colors.red
                   : focused && widget.textHintColor != Colors.white
-                      ? AppColors.blue
+                      ? AppColors.primary
                       : widget.textHintColor,
             ),
           ),

@@ -50,7 +50,7 @@ class _AppTextFieldState extends State<AppTextField> {
               color: widget.errorText != null && alreadyClicked
                   ? Colors.red
                   : focused && widget.textHintColor != Colors.white
-                      ? AppColors.blue
+                      ? AppColors.primary
                       : widget.textHintColor,
             ),
           ),

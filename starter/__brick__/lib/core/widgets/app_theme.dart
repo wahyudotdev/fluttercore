@@ -6,49 +6,50 @@ import 'app_colors.dart';
 
 class AppTheme {
   final textTheme = TextTheme(
-    headline1: GoogleFonts.oswald(
-        fontSize: 89, fontWeight: FontWeight.w300, letterSpacing: -1.5),
-    headline2: GoogleFonts.oswald(
-        fontSize: 55, fontWeight: FontWeight.w300, letterSpacing: -0.5),
-    headline3: GoogleFonts.oswald(fontSize: 44, fontWeight: FontWeight.w400),
-    headline4: GoogleFonts.oswald(
-      fontSize: 28,
+    headline1: GoogleFonts.poppins(
+        fontSize: 89.sp, fontWeight: FontWeight.w300, letterSpacing: -1.5.sp),
+    headline2: GoogleFonts.poppins(
+        fontSize: 36.sp, fontWeight: FontWeight.w300, letterSpacing: -0.5.sp),
+    headline3:
+        GoogleFonts.poppins(fontSize: 44.sp, fontWeight: FontWeight.w400),
+    headline4: GoogleFonts.poppins(
+      fontSize: 28.sp,
       fontWeight: FontWeight.w400,
-      letterSpacing: 0.25,
+      letterSpacing: 0.25.sp,
       color: Colors.black,
     ),
-    headline5: GoogleFonts.oswald(fontSize: 22, fontWeight: FontWeight.w400),
-    headline6: GoogleFonts.oswald(
-      fontSize: 16,
+    headline5:
+        GoogleFonts.poppins(fontSize: 24.sp, fontWeight: FontWeight.w400),
+    headline6: GoogleFonts.poppins(
+      fontSize: 16.sp,
       fontWeight: FontWeight.w500,
-      letterSpacing: 0.15,
+      letterSpacing: 0.15.sp,
     ),
-    subtitle1: GoogleFonts.oswald(
-        fontSize: 14, fontWeight: FontWeight.w400, letterSpacing: 0.15),
-    subtitle2: GoogleFonts.oswald(
-        fontSize: 13, fontWeight: FontWeight.w500, letterSpacing: 0.1),
-    bodyText1: GoogleFonts.mulish(
+    subtitle1: GoogleFonts.poppins(
+        fontSize: 14.sp, fontWeight: FontWeight.w400, letterSpacing: 0.15.sp),
+    subtitle2: GoogleFonts.poppins(
+        fontSize: 13.sp, fontWeight: FontWeight.w500, letterSpacing: 0.1.sp),
+    bodyText1: GoogleFonts.poppins(
       color: AppColors.textBlack,
-      fontSize: 14,
+      fontSize: 14.sp,
       fontWeight: FontWeight.w400,
-      letterSpacing: 0.1,
+      letterSpacing: 0.1.sp,
     ),
-    bodyText2: GoogleFonts.mulish(
-      color: AppColors.textBlack,
-      fontSize: 12,
+    bodyText2: GoogleFonts.poppins(
+      color: Colors.white,
+      fontSize: 12.sp,
       fontWeight: FontWeight.w400,
-      letterSpacing: 0.15,
+      letterSpacing: 0.15.sp,
     ),
-    button: GoogleFonts.mulish(
-      fontSize: 14,
-      fontWeight: FontWeight.w700,
-      letterSpacing: 0.15,
+    button: GoogleFonts.poppins(
+      fontSize: 14.sp,
+      letterSpacing: 0.15.sp,
       color: Colors.white,
     ),
-    caption: GoogleFonts.mulish(
-        fontSize: 13, fontWeight: FontWeight.w400, letterSpacing: 0.4),
-    overline: GoogleFonts.mulish(
-        fontSize: 11, fontWeight: FontWeight.w400, letterSpacing: 1.5),
+    caption: GoogleFonts.poppins(
+        fontSize: 13.sp, fontWeight: FontWeight.w400, letterSpacing: 0.4.sp),
+    overline: GoogleFonts.poppins(
+        fontSize: 11.sp, fontWeight: FontWeight.w400, letterSpacing: 1.5.sp),
   );
 
   final appBarTheme = const AppBarTheme(
@@ -59,17 +60,17 @@ class AppTheme {
   );
 
   final checkBoxTheme = CheckboxThemeData(
-    fillColor: MaterialStateProperty.all(AppColors.blue),
+    fillColor: MaterialStateProperty.all(AppColors.primary),
     shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(4),
+      borderRadius: BorderRadius.circular(4.r),
     ),
     overlayColor: MaterialStateProperty.all(AppColors.softGray),
   );
 
   final radioTheme = RadioThemeData(
-    fillColor: MaterialStateProperty.all(AppColors.blue),
+    fillColor: MaterialStateProperty.all(AppColors.primary),
   );
 
-  static final marginHorizontal = 32.w;
-  static final marginVertical = 16.h;
+  static final marginHorizontal = 24.w;
+  static final marginVertical = 24.h;
 }

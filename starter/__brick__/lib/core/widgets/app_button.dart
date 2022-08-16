@@ -15,7 +15,7 @@ class AppButton extends StatelessWidget {
   final double radius;
   const AppButton({
     super.key,
-    this.color = AppColors.green,
+    this.color = AppColors.secondary,
     this.caption = 'Button',
     required this.onPressed,
     this.isEnabled = true,

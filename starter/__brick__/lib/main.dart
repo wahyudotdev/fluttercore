@@ -1,4 +1,11 @@
+import 'dart:io';
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:hydrated_bloc/hydrated_bloc.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:tes/core/utils/self_sign_cert.dart';
+import 'core/widgets/app_theme.dart';
 
 import 'base_app.dart';
 
@@ -16,7 +23,16 @@ void main() async {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
     statusBarColor: Colors.transparent,
   ));
-  runApp(const App());
+  final storage = await HydratedStorage.build(
+      storageDirectory: await getApplicationDocumentsDirectory());
+
+  if (kDebugMode) {
+    HttpOverrides.global = SelfSignCert();
+  }
+  HydratedBlocOverrides.runZoned(
+    () => runApp(const App()),
+    storage: storage,
+  );
 }
 
 class App extends StatelessWidget {
@@ -27,9 +43,17 @@ class App extends StatelessWidget {
     return ScreenUtilInit(
       designSize: const Size({{width}}, {{height}}),
       builder: (context, child) {
+        final theme = AppTheme();
         return MaterialApp(
           title: '{{package_name}}',
           debugShowCheckedModeBanner: false,
+          theme: ThemeData(
+            textTheme: theme.textTheme,
+            radioTheme: theme.radioTheme,
+            checkboxTheme: theme.checkBoxTheme,
+            scaffoldBackgroundColor: Colors.white,
+            appBarTheme: theme.appBarTheme,
+          ),
           localizationsDelegates: const [
             AppLocalizations.delegate,
             GlobalMaterialLocalizations.delegate,

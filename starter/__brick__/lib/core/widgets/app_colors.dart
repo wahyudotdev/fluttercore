@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-  static const green = Color(0xFF7AC241);
-  static const blue = Color(0xFF1767B3);
+  static const secondary = Color(0xFF7AC241);
+  static const primary = Color(0xFF1767B3);
   static const textBlack = Color(0xFF030303);
   static const textGray = Color(0xFFBABABA);
   static const softGray = Color(0xFFF3F3F3);
 
   static final primarySwatch = MaterialColor(
-    blue.value,
+    primary.value,
     const {
       50: Color(0xff155da1), //10%
       100: Color(0xff12528f), //20%
