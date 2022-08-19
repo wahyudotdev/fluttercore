@@ -17,3 +17,16 @@ vars:
     description: Device height (in design)
     prompt: Device height (in design)
     default: 690
+  
+  primary_color:
+    type: string
+    description: Submit primary color in hex (without 0x, with alpha)
+    prompt: Submit primary color in hex (without 0x, with alpha)
+    default: 'ff54BAB9'
+  
+  secondary_color:
+    type: string
+    description: Submit primary color in hex (without 0x, with alpha)
+    prompt: Submit primary color in hex (without 0x, with alpha)
+    default: 'ff18978F'
+  
