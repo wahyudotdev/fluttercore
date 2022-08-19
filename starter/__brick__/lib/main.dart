@@ -4,7 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:tes/core/utils/self_sign_cert.dart';
+import 'core/utils/self_sign_cert.dart';
 import 'core/widgets/app_theme.dart';
 
 import 'base_app.dart';
@@ -53,6 +53,7 @@ class App extends StatelessWidget {
             checkboxTheme: theme.checkBoxTheme,
             scaffoldBackgroundColor: Colors.white,
             appBarTheme: theme.appBarTheme,
+            inputDecorationTheme: theme.inputDecorationTheme,
           ),
           localizationsDelegates: const [
             AppLocalizations.delegate,

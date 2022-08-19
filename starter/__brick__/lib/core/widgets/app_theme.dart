@@ -71,6 +71,29 @@ class AppTheme {
     fillColor: MaterialStateProperty.all(AppColors.primary),
   );
 
+  final inputDecorationTheme = InputDecorationTheme(
+    enabledBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(12),
+      borderSide: const BorderSide(
+        color: AppColors.softGray,
+      ),
+    ),
+    border: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(12),
+      borderSide: const BorderSide(
+        color: AppColors.softGray,
+      ),
+    ),
+    focusedBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(12),
+      borderSide: BorderSide(
+        color: AppColors.primarySwatch,
+      ),
+    ),
+    iconColor: AppColors.primarySwatch,
+    focusColor: AppColors.primarySwatch,
+  );
+
   static final marginHorizontal = 24.w;
   static final marginVertical = 24.h;
 }
