@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:{{package_name}}/ui/menu_screen.dart';
+import '../ui/menu_screen.dart';
+import 'package:go_router/go_router.dart';
 import 'splash/screen/splash_screen.dart';
 
-class AppRoutes {
-  static Route<dynamic> generateRoute(RouteSettings settings) {
-    switch (settings.name) {
-      case '/':
-        return MaterialPageRoute(builder: (_) => const SplashScreen());
-      case '/menu':
-        return MaterialPageRoute(builder: (_) => const MenuScreen());
-      default:
-        return MaterialPageRoute(
-          builder: (_) => Scaffold(
-            body: Center(child: Text('No route defined for ${settings.name}')),
-          ),
-        );
-    }
-  }
-}
+var router = GoRouter(routes: [
+  GoRoute(
+    path: '/',
+    builder: (context, state) => const SplashScreen(),
+  ),
+  GoRoute(
+    path: '/menu',
+    builder: (context, state) => const MenuScreen(),
+  )
+]);
+
+Widget get errorPage => const Center(
+      child: SizedBox(
+        width: 200,
+        child: Text('Error, maybe you forgot to include required obj'),
+      ),
+    );

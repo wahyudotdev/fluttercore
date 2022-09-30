@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import '../widget/im_flutter.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -13,8 +14,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-      Future.delayed(const Duration(seconds: 3),
-          () => Navigator.of(context).pushReplacementNamed('/menu'));
+      Future.delayed(const Duration(seconds: 3), () => context.go('/menu'));
     });
   }
 

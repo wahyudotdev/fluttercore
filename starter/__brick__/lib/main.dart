@@ -44,7 +44,7 @@ class App extends StatelessWidget {
       designSize: const Size({{width}}, {{height}}),
       builder: (context, child) {
         final theme = AppTheme();
-        return MaterialApp(
+        return MaterialApp.router(
           title: '{{package_name}}',
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
@@ -61,9 +61,11 @@ class App extends StatelessWidget {
             GlobalWidgetsLocalizations.delegate,
             GlobalCupertinoLocalizations.delegate,
           ],
-          onGenerateRoute: AppRoutes.generateRoute,
           supportedLocales: const [Locale('id')],
           builder: (context, widget) => BaseApp(child: widget),
+          routeInformationParser: router.routeInformationParser,
+          routerDelegate: router.routerDelegate,
+          routeInformationProvider: router.routeInformationProvider,
         );
       },
     );
