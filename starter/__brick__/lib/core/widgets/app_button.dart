@@ -44,11 +44,11 @@ class AppButton extends StatelessWidget {
               Visibility(
                 visible: isLoading,
                 child: Container(
-                  width: 4.w,
-                  height: 4.w,
+                  width: 12.w,
+                  height: 12.w,
                   margin: const EdgeInsets.only(right: 4),
-                  child: const CircularProgressIndicator.adaptive(
-                    backgroundColor: Colors.white,
+                  child: CircularProgressIndicator.adaptive(
+                    backgroundColor: Colors.white.withOpacity(0.5),
                   ),
                 ),
               ),
