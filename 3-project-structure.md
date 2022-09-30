@@ -85,3 +85,6 @@ Contain routes of your app, using gorouter as its primary navigation library. Yo
 
 ### Features
 Each app features (ex: login, register) will always consist of screen folder to store screen layout, widget folder to store screen widgets, and bloc folder to store your bloc class
+
+### l10n.yaml
+This is localization config where you can add another translation for every language you want, you can add your app translation on assets/l10n/country_code_.arb
