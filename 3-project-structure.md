@@ -57,7 +57,7 @@ Container(
 ```
 
 ### base_app.dart
-use this as top level initialization for global state like user auth. Or in rare case like example if you must implement an overlay global dialog to handle error, you can wrap the entire flutter widget with this class and call dialog inside base_app from anywhere with state manager
+use this as top level initialization for global state like user auth. Or in rare case like example if you must implement an overlay global dialog to show error message, you can wrap the entire flutter widget with this class and call dialog inside base_app from anywhere with state manager
 
 ### Config
 this directory consist of several config that you must configure yourself, like initial api key (if any), base url, and network timeout.
