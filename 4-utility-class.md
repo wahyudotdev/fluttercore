@@ -77,13 +77,14 @@ class Product {
 }
 
 ```
-### JsonStringToInt
+Here is list of available custom parser :
+#### - JsonStringToInt
 Parse potential nullable string to int, without this it will crash whenever we try to parse data like this {"price":"10000"}. When failed to parse data then it will return 0
-### JsonStringToIntNullable
+#### - JsonStringToIntNullable
 Same as JsonStringToInt but it will return null instead of 0 when parse failed
-### JsonStringToDouble
+#### - JsonStringToDouble
 Parse potential nullable string to double. Return 0 if data is null
-### JsonStringToDoubleNullable
+#### - JsonStringToDoubleNullable
 Same as JsonStringToDoubleNullable but it will return null instead of 0 when parse failed
-### JsonIntToBool
+#### - JsonIntToBool
 Parse 1 as true and 0 as false
