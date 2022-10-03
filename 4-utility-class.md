@@ -88,3 +88,22 @@ Parse potential nullable string to double. Return 0 if data is null
 Same as JsonStringToDoubleNullable but it will return null instead of 0 when parse failed
 #### - JsonIntToBool
 Parse 1 as true and 0 as false
+
+## Media Service
+Use this class to pick image from camera or gallery.
+Example usage :
+```dart
+// get MediaService instance from service locator
+final mediaService = getIt<MediaService>();
+
+AppButton(
+    onClick: ()  {
+        // method getImage return Future<File?>
+        // AppImageSource.gallery -> open gallery to pick image
+        // AppImageSource.camera -> open camera to pick image
+        mediaService.getImage(context, AppImageSource.gallery)
+                    .then((file) => print(file));
+    }
+)
+```
+
