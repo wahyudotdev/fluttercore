@@ -148,3 +148,20 @@ void main(){
     name?.let((it) => print(it)); // flutter
 }
 ```
+
+## Password Strength
+Find the password strength of given String. 
+- PasswordStrength.weak : <8 character
+- PasswordStrength.medium : >= 8 character with number
+- PasswordStrength.strong : >= 8 character with number and uppercase letter
+- PasswordStrength.veryStrong : >= 8 character with number, uppercase, and special symbol
+
+Example usage :
+```dart
+import 'package:name/core/utils/password_helper.dart';
+
+String? newPassword = 'P@ssw0rd';
+
+print(newPassword.passwordStrength); // PasswordStrength.veryStrong
+
+```
