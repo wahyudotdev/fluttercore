@@ -213,3 +213,26 @@ void convert() async {
     Uint8List markerBytes = await icon.uint8List; // conversion result, use this as marker icon for google map
 }
 ```
+
+## Notification Service
+Usage :
+1. Initialize service. 
+```dart
+
+void main() async {
+    await NotificationService.setup();
+}
+```
+2. Show notification
+```dart
+AppButton(
+    onClick: () => NotificationService.showNotification(
+        title: 'Notification Title',
+        body: 'Notification Body',
+    )
+)
+```
+
+To replace default notification icon
+- android : app/src/main/res/mipmap*/ic_launcher.png
+- ios : coming soon
