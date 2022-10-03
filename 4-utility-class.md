@@ -120,6 +120,8 @@ Bonus :
 
 Example usage :
 ```dart
+import 'package:name/core/utils/bloc_transformer.dart';
+
 class SearchProduct extends Bloc<SearchEvent, SearchState> {
     SearchProduct() : super(SearchInitial()) {
 
