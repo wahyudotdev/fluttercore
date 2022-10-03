@@ -178,3 +178,17 @@ void main() {
     }
 }
 ```
+
+## Email Validator
+Check if email is valid. Example usage
+```dart
+import 'package:name/core/utils/string_extension.dart';
+
+String? email = 'flutter.dev';
+print(email.isValidEmail); // false
+
+email = 'cs@flutter.dev';
+print(email.isValidEmail); // true
+
+```
+
