@@ -202,3 +202,14 @@ print(htmlString.removeHtmlTags); // Hello Mom
 
 ```
 
+## Asset Icon to Google Maps Marker Converter
+Use this extension to convert existing marker icon assets (ex: assets/images/marker.png) to Uint8List. Usefull to convert asset icon to marker bitmap.
+
+```dart
+import 'package:name/core/utils/string_extension.dart';
+
+void convert() async {
+    String? icon = 'assets/images/marker.png'; // path to icon
+    Uint8List markerBytes = await icon.uint8List; // conversion result, use this as marker icon for google map
+}
+```
