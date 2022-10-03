@@ -165,3 +165,16 @@ String? newPassword = 'P@ssw0rd';
 print(newPassword.passwordStrength); // PasswordStrength.veryStrong
 
 ```
+
+## Self Sign Cert
+Bypass network error when there is invalid https certificate. **Use this for debugging purpose only** because it can risk our user to MITM attack, for example when we need to debug or intercept http request with third party tools like burpsuite or postman. Example usage :
+```dart
+import 'package:flutter/foundation.dart';
+import 'core/utils/self_sign_cert.dart';
+
+void main() {
+    if (kDebugMode) {
+        HttpOverrides.global = SelfSignCert();
+    }
+}
+```
