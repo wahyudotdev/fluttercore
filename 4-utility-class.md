@@ -107,3 +107,26 @@ AppButton(
 )
 ```
 
+## Bloc Transformer
+
+This starter is already include [bloc_concurrency](https://pub.dev/packages/bloc_concurrency) library that consist of 4 default transformer :
+- concurrent : process event concurrently
+- sequential : process event sequentially
+- droppable : ignore any event added while an event is processing
+- restartable : process only latest event and cancel previous event handler
+
+Bonus :
+- debounceSequential : delay process of any event. Usefull to delay user input like search feature
+
+Example usage :
+```dart
+class SearchProduct extends Bloc<SearchEvent, SearchState> {
+    SearchProduct() : super(SearchInitial()) {
+
+        on<KeywordEnteredEvent>((event, emit) {
+            debugPrint(event.searchKeyword);
+        }, transformer: debounceSequential(const Duration(seconds: 1))); // delay user input for 1 sec
+    
+    }
+}
+```
