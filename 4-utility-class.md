@@ -132,3 +132,19 @@ class SearchProduct extends Bloc<SearchEvent, SearchState> {
     }
 }
 ```
+
+## Let Callback
+Execute callback when value is not null. Usefull checking null value. Example usage :
+
+```dart
+import 'package:name/core/utils/let.dart';
+
+void main(){
+    String name?
+    name?.let((it) => print(it)); // won't execute
+
+    name = 'flutter';
+
+    name?.let((it) => print(it)); // flutter
+}
+```
