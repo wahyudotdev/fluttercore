@@ -192,3 +192,13 @@ print(email.isValidEmail); // true
 
 ```
 
+## Remove Html Tags
+Remove all html tags. Example usage
+```dart
+import 'package:name/core/utils/string_extension.dart';
+
+String? htmlString = '<p>Hello Mom</p>';
+print(htmlString.removeHtmlTags); // Hello Mom
+
+```
+
