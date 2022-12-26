@@ -39,14 +39,9 @@ class App extends StatelessWidget {
         return MaterialApp.router(
           title: '{{package_name}}',
           debugShowCheckedModeBanner: false,
-          theme: ThemeData(
-            textTheme: theme.textTheme,
-            radioTheme: theme.radioTheme,
-            checkboxTheme: theme.checkBoxTheme,
-            scaffoldBackgroundColor: Colors.white,
-            appBarTheme: theme.appBarTheme,
-            inputDecorationTheme: theme.inputDecorationTheme,
-          ),
+          theme: theme.light,
+          darkTheme: theme.dark,
+          themeMode: ThemeMode.light,
           localizationsDelegates: const [
             AppLocalizations.delegate,
             GlobalMaterialLocalizations.delegate,
