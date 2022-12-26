@@ -40,7 +40,7 @@ class MediaServiceImpl implements MediaService {
     if (imageSource == AppImageSource.camera) {
       return await permissionService.handleCameraPermission(context);
     } else if (imageSource == AppImageSource.gallery) {
-      return await permissionService.handlePhotosPermission(context);
+      return true;
     } else {
       return false;
     }
