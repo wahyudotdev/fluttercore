@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:path_provider/path_provider.dart';
 import 'core/utils/self_sign_cert.dart';
 import 'core/widgets/app_theme.dart';
@@ -23,16 +22,10 @@ void main() async {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
     statusBarColor: Colors.transparent,
   ));
-  final storage = await HydratedStorage.build(
-      storageDirectory: await getApplicationDocumentsDirectory());
-
   if (kDebugMode) {
     HttpOverrides.global = SelfSignCert();
   }
-  HydratedBlocOverrides.runZoned(
-    () => runApp(const App()),
-    storage: storage,
-  );
+  runApp(const App());
 }
 
 class App extends StatelessWidget {
