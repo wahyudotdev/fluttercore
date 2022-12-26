@@ -58,7 +58,7 @@ void pubspecWriter(HookContext context) {
     MapEntry('uuid', '^3.0.6'),
     MapEntry('flutter_local_notifications', '^9.7.0'),
     MapEntry('flutter_screenutil', '^5.5.3+2'),
-    MapEntry('go_router', '^4.2.7'),
+    MapEntry('go_router', '^6.0.0'),
     MapEntry('copy_with_extension', '^4.0.0'),
   });
 
