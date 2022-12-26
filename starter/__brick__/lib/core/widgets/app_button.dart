@@ -37,6 +37,7 @@ class AppButton extends StatelessWidget {
             ),
             backgroundColor: isEnabled == true ? color : Colors.grey,
             textStyle: textStyle ?? context.textTheme.button,
+            minimumSize: Size.fromHeight(48.h),
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
