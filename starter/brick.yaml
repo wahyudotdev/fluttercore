@@ -10,13 +10,13 @@ vars:
     type: number
     description: Device width (in design)
     prompt: Device width (in design)
-    default: 360
+    default: 390
 
   height:
     type: number
     description: Device height (in design)
     prompt: Device height (in design)
-    default: 690
+    default: 800
   
   primary_color:
     type: string
@@ -26,7 +26,7 @@ vars:
   
   secondary_color:
     type: string
-    description: Submit primary color in hex (without 0x, with alpha)
+    description: Submit secondary color in hex (without 0x, with alpha)
     prompt: Submit primary color in hex (without 0x, with alpha)
     default: 'ff18978F'
   
