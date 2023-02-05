@@ -3,3 +3,4 @@ package_config.json
 .dart_tool
 .flutter-plugins
 .flutter-plugins-dependencies
+build/*
