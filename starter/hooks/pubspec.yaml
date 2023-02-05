@@ -1,9 +1,0 @@
-name: starter_hooks
-
-environment:
-  sdk: ">=2.12.0 <3.0.0"
-
-dependencies:
-  mason: any
-  yaml: ^3.1.1
-  yaml_writer: ^1.0.3

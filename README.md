@@ -1,6 +1,16 @@
-# FlutterCore
-This is a brick repository that I rapidly use to generate some extra peny from flutter development. Hope you can enjoy this starter also
-### [> Project starter](https://github.com/wahyudotdev/fluttercore/tree/main/starter)
-Provide flutter singleton clean architecture structure with several utility class to boost your developement
-### [> Feature](https://github.com/wahyudotdev/fluttercore/tree/main/feature)
-Use this bricks to generate your feature screen paired with flutter bloc
+# fluttercore
+
+A new Flutter project.
+
+## Getting Started
+
+This project is a starting point for a Flutter application.
+
+A few resources to get you started if this is your first Flutter project:
+
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
